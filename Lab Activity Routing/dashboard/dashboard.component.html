@@ -1,0 +1,27 @@
+<h2>Admin Panel Dashboard</h2> 
+
+<hr>
+<br>
+<div class="container"> 
+    <table class="table table-striped table-bordered" border = "1"> 
+        <thead> 
+            <tr> 
+                <th>Name</th> 
+                <th>Email</th> 
+                <th>User Password</th> 
+            </tr> 
+        </thead> 
+            <tbody> 
+                <tr *ngFor="let user of customer"> 
+                <td>{{user.firstName}} {{user.lastName}}</td> 
+                <td>{{user.email}}</td> 
+                <td *ngIf="showText">{{user.password}}</td> 
+            </tr> 
+            </tbody>             
+    </table> 
+    <div style="text-align: right;">
+        <button (click)="toggleText()">
+            {{ showText ? 'Hide Password' : 'Show Password' }}
+        </button> 
+    </div>
+</div> 
