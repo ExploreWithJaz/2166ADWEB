@@ -1,0 +1,71 @@
+<div class="bg-box">
+  <h1 style="color: white; text-align: center;">Jazper Garcia   WD-301</h1>
+  <div class="row">
+    <div class="column">
+      <div class="card">
+        <h2>Text Format Pipes</h2>
+        <p>Name with uppercase: <br> {{name | uppercase}}</p>
+        <p>Name with lowercase: <br> {{name | lowercase}}</p>
+        <p>Date with uppercase: <br> {{presentDate | date | uppercase}}</p>
+      </div>
+    </div>
+  
+    <div class="column">
+      <div class="card">
+        <h2>Date Pipes</h2>
+        <p> Today's date and time:- {{presentDate | date: 'EEEE, MMMM d, y, h:mm:ss a zzzz' }} </p>
+        <p> Short time :- {{presentDate | date: 'shortTime' }} </p>
+        <p> Full time:- {{presentDate | date: 'fullTime'}} </p>
+      </div>
+    </div>
+    
+    <div class="column">
+      <div class="card">
+        <h2>Currency Pipes</h2>
+        <p>Petchay price PHP {{petchay | number : '0.2-5'}}</p>
+        <p>Patatas price PHP {{patatas | number : '6.2-15'}}</p>
+        <p>Patatas no decimal PHP {{patatas | number}}</p>
+      </div>
+    </div>
+    
+    <div class="column">
+      <div class="card">
+        <h2>Decimal Pipes</h2>
+        <p>No formatting: <br> {{pi | number}}</p>
+        <p>With formatting <br> {{pi | number: '1.0-2'}}</p>
+        <p>Thousand <br> {{pi | number: '4.0-2'}}</p>
+      </div>
+    </div>
+  
+    <div class="row">
+      <div class="column">
+        <div class="card">
+          <h2>Json Pipes</h2>
+          <p>No formatting : {{data}}</p>
+          <p>With formatting : {{data | json}}</p>
+        </div>
+      </div>
+    
+      <div class="column">
+        <div class="card">
+          <h2>Percent Pipes</h2>
+          <p>Percent : {{a | percent}}</p>
+          <p>Percent : {{a | percent : '2.2-3'}}</p>
+          <p>Percent : {{a | percent : '4.5-10'}}</p>
+        </div>
+      </div>
+      
+      <div class="column">
+        <div class="card">
+          <h2>Slice Pipes</h2>
+          <p>Showing 0:4 in list</p>
+          <li *ngFor="let i of collection | slice: 0:4">{{i}}</li>
+          <p>Showing 0:1 in list</p>
+          <li *ngFor="let i of collection | slice: 0:1">{{i}}</li>
+          <p>Showing 3:5 in list</p>
+          <li *ngFor="let i of collection | slice: 3:5">{{i}}</li>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
