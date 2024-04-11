@@ -1,0 +1,32 @@
+<div class="nav">
+  <img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c5/National_Book_Store_2016_logo.svg/640px-National_Book_Store_2016_logo.svg.png" alt="">
+</div>
+
+<div class="content">
+  <input id="newBook" placeholder="title">
+  <input id="newDesc" placeholder="description">
+  <input id="newPrice" placeholder="book price">
+  <button (click)="addBook()">Add book</button>
+</div>
+
+<div class="container">
+  <table>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Price</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let book of books">
+        <td>{{ book.title }}</td>
+        <td>{{ book.description }}</td>
+        <td>{{ book.price }}</td>
+        <td><button (click)="deleteBook(book.id)">Delete book</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
